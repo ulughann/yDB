@@ -18,7 +18,7 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm run compile  # I want to deploy the folder that this command generates! 
+          npm run compile
       - name: push to github dist folder
         uses: EndBug/add-and-commit@v7
         with:
