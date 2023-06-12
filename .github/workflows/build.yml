@@ -1,53 +1,32 @@
-name: Compile typescript and push to dist/
-
 on:
-  push:
-    branches: ['main']
+    push:
+      branches: [ main ]
 
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pull-requests: write
-  
-
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
-
+      
 jobs:
-  compile:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v2
-      
-        - name: Set Up Node.js
-          uses: actions/setup-node@v2
-          with:
-            node-version: 16
-      
-        - name: Install Dependencies
-          run: npm install
-      
-        - name: Build TypeScript
-          run: npm run compile
-      
-        - name: Configure Git
-          run: |
-            git config --global user.email "iscosmos@outlook.com"
-            git config --global user.name "onrirr"
-            git config --global credential.helper store
-        
-        - name: Debug Git Configuration
-          run: |
-            git config --list    
-        
-        - name: Commit and Push Changes
-          run: |
-            git add dist/
-            git commit -m "Compile TypeScript and push to dist/"
-            git push https://github.com/${{ github.repository }}.git HEAD:main
-          env:
-            GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-      
+    build-and-deploy:
+      runs-on: ubuntu-latest
+  
+      steps:
+      - uses: actions/checkout@master
+  
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+  
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run compile  # I want to deploy the folder that this command generates! 
+      - name: push to github dist folder
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: github-actions[bot]
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          message: 'build: ${{ github.sha }}'
+          add: 'dist'
+          force: true
+          signoff: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
