@@ -33,11 +33,17 @@ jobs:
         - name: Build TypeScript
           run: npm run compile
       
+        - name: Configure Git
+          run: |
+            git config --global user.email "iscosmos@outlook.com"
+            git config --global user.name "onrirr"
+            git config --global credential.helper store
+        
         - name: Commit and Push Changes
           run: |
-            git config --local user.email "iscosmos@outlook.com"
-            git config --local user.name "onrirr"
-            git add .
+            git add dist/
             git commit -m "Compile TypeScript and push to dist/"
-            git push
+            git push https://github.com/${{ github.repository }}.git HEAD:main
+          env:
+            GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       
