@@ -39,6 +39,10 @@ jobs:
             git config --global user.name "onrirr"
             git config --global credential.helper store
         
+        - name: Debug Git Configuration
+          run: |
+            git config --list    
+        
         - name: Commit and Push Changes
           run: |
             git add dist/
