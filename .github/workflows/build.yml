@@ -8,8 +8,8 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
+  pull-requests: write
+  
 
 concurrency:
   group: 'pages'
@@ -35,8 +35,8 @@ jobs:
       
         - name: Commit and Push Changes
           run: |
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
+            git config --local user.email "iscosmos@outlook.com"
+            git config --local user.name "onrirr"
             git add .
             git commit -m "Compile TypeScript and push to dist/"
             git push
