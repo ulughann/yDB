@@ -11,4 +11,4 @@ db.on("elementEdit", (El, newValue, oldValue) => {
   console.log(`"${El.ID}" element Value: ${oldValue} -> ${newValue}`);
 });
 
-console.log("hello world");
+console.log("hello world"); // hi
