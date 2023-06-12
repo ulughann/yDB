@@ -33,9 +33,6 @@ jobs:
         - name: Build TypeScript
           run: npm run compile
       
-        - name: Copy Built Files to dist/
-          run: cp -R build/* dist/
-      
         - name: Commit and Push Changes
           run: |
             git config --local user.email "action@github.com"
