@@ -1,0 +1,11 @@
+<!-- docs/_sidebar.md -->
+* [Getting Started](README.md)
+* [Initialization](constructor.md "Initialize your db")
+* [Primitive Methods](methods.md "Primitive Methods")
+* [Math Methods](math.md "Math Methods")
+* [Array Methods](array.md "Array Methods")
+* [Table Methods](tables.md "Table Methods")
+* [DB Document Methods](database.md "DB Document Methods")
+* [DB Document Properties](props.md "DB Document Properties")
+* [Caching](caching.md "Caching")
+* [Events](events.md "Events")
