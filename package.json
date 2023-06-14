@@ -4,7 +4,7 @@
   "description": "A local database that supports yaml and json",
   "url": "https://onrirr.github.io/yDB/#/",
   "repository": "github:onrirr/ydb",
-  "main": "./dist/esm/index.js"
+  "main": "./dist/esm/index.js",
   "categories": [
     "database",
     "yaml",
