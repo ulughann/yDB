@@ -1,6 +1,6 @@
 {
   "name": "ydb",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "A local database that supports yaml and json",
   "url": "https://onrirr.github.io/yDB/#/",
   "repository": "github:onrirr/ydb",
@@ -22,13 +22,15 @@
     "start": "npx nodemon"
   },
   "exports": {
-    "./*": {
-      "types": "./dist/types/*.d.ts",
-      "require": "./dist/cjs/*.js",
-      "import": "./dist/esm/*.js",
-      "default": "./dist/esm/*.js",
-      "main": ".dist/esm/*.js"
-    }
+  ".": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js",
+    "types": "./dist/types/index.d.ts",
+    "default": "./dist/esm/index.js"
+  },
+  "./dist/esm/*": "./dist/esm/*.js",
+  "./dist/cjs/*": "./dist/cjs/*.js",
+  "./dist/types/*": "./dist/types/*.d.ts"
   },
   "author": "onrir",
   "license": "MIT",
