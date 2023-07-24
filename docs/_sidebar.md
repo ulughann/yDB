@@ -9,4 +9,4 @@
 * [DB Document Properties](props.md "DB Document Properties")
 * [Caching](caching.md "Caching")
 * [Events](events.md "Events")
-* [Toml](toml.md "Toml")
+* [Toml](toml.md "Toml with yDB")
