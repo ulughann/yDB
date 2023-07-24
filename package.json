@@ -1,7 +1,7 @@
 {
   "name": "ydb",
-  "version": "1.3.4",
-  "description": "A local database that supports yaml and json",
+  "version": "1.4.0",
+  "description": "A local database for prototyping with Yaml/Json (+ TOML parser)",
   "url": "https://onrirr.github.io/yDB/#/",
   "repository": "github:onrirr/ydb",
   "main": "./dist/esm/index.js",
