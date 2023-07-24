@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Table = exports.Action = exports.ElementInData = exports.Database = exports.Collection = void 0;
+exports.Toml = exports.Table = exports.Action = exports.ElementInData = exports.Database = exports.Collection = void 0;
 const Collection_1 = require("./src/Collection");
 Object.defineProperty(exports, "Collection", { enumerable: true, get: function () { return Collection_1.Collection; } });
 const ElementInData_1 = require("./src/ElementInData");
@@ -11,3 +11,5 @@ const Table_1 = require("./src/Table");
 Object.defineProperty(exports, "Table", { enumerable: true, get: function () { return Table_1.Table; } });
 const Database_1 = require("./src/Database");
 Object.defineProperty(exports, "Database", { enumerable: true, get: function () { return Database_1.Database; } });
+const Toml_1 = require("./src/Toml");
+Object.defineProperty(exports, "Toml", { enumerable: true, get: function () { return Toml_1.Toml; } });
