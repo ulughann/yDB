@@ -9,6 +9,7 @@ A lightweight, easy to use, and fast database system for prototyping in Javascri
 - **Versatile**: ydb can be used for a variety of purposes and allows for both **yaml** and **json** files.
 - **Secure by default**: ydb allows for encryption with a password.
 - **Blazingly fast**: ydb is built with speed in mind and is as fast as Node.js allows.
+- **Toml Support**: ydb supports parsing and reading TOML files.
 
 ## Installation
 ```bash
