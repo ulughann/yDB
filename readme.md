@@ -1,15 +1,7 @@
 # ydb
-A lightweight, easy to use, and fast database system for prototyping in Javascript / Typescript.
+Lightweight JSON/YAML database for Node.js
 
 ![ydb](static/banner.png)
-
-## Features
-- **Beginner Friendly**: ydb is easy to use with simple keywords that avoid boilerplate.
-- **Easy to use**: Ever declared a variable or an object? Then you already know how to use ydb.
-- **Versatile**: ydb can be used for a variety of purposes and allows for both **yaml** and **json** files.
-- **Secure by default**: ydb allows for encryption with a password.
-- **Blazingly fast**: ydb is built with speed in mind and is as fast as Node.js allows.
-- **Toml Support**: ydb supports parsing and reading TOML files.
 
 ## Installation
 ```bash
@@ -17,15 +9,12 @@ npm install ydb
 ```
 
 ## Usage
-Commonjs:
-```js
-const { Database } = require('ydb');
-const db = new Database('database.json');
-```
-Modulejs:
-```js
+```javascript
 import { Database } from 'ydb';
-const db = new Database('database.json');
+const db = new Database('path/to/db.json');
+
+db.set('foo', 'bar');
+db.get('foo'); // bar
 ```
 
-
+Check out the [Documentations](https://onrirr.github.io/yDB/) for more info

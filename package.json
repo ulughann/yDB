@@ -1,7 +1,7 @@
 {
   "name": "ydb",
-  "version": "1.4.0",
-  "description": "A local database for prototyping with Yaml/Json (+ TOML parser)",
+  "version": "1.4.1",
+  "description": "Json/Yaml database for rapid prototyping",
   "url": "https://onrirr.github.io/yDB/#/",
   "repository": "github:onrirr/ydb",
   "main": "./dist/esm/index.js",
@@ -17,20 +17,18 @@
   ],
   "scripts": {
     "compile": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
-    "build:clean": "rm -rf ./dist",
-    "build": "npm-run-all build:clean compile && node ./scripts/prepare-package-json",
     "start": "npx nodemon"
   },
   "exports": {
-  ".": {
-    "import": "./dist/esm/index.js",
-    "require": "./dist/cjs/index.js",
-    "types": "./dist/types/index.d.ts",
-    "default": "./dist/esm/index.js"
-  },
-  "./dist/esm/*": "./dist/esm/*.js",
-  "./dist/cjs/*": "./dist/cjs/*.js",
-  "./dist/types/*": "./dist/types/*.d.ts"
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/esm/index.js"
+    },
+    "./dist/esm/*": "./dist/esm/*.js",
+    "./dist/cjs/*": "./dist/cjs/*.js",
+    "./dist/types/*": "./dist/types/*.d.ts"
   },
   "author": "onrir",
   "license": "MIT",
