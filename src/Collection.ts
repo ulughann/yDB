@@ -1,6 +1,5 @@
 import { formatErrorMessage } from "./util";
 export class Collection {
-
   map: Map<any, any>;
   constructor(values?: IterableIterator<any>) {
     this.map = new Map(values ? values : []);

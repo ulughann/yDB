@@ -5,16 +5,6 @@
   "url": "https://onrirr.github.io/yDB/#/",
   "repository": "github:onrirr/ydb",
   "main": "./dist/esm/index.js",
-  "categories": [
-    "database",
-    "yaml",
-    "yml",
-    "json",
-    "quick.db",
-    "quickdb",
-    "ydb.js",
-    "ydb"
-  ],
   "scripts": {
     "compile": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
     "start": "npx nodemon"

@@ -9,12 +9,36 @@
         ".vscode": true,
         ".github": true,
         "static": true,
-        "node_modules": true
+        "node_modules": true,
+        "tsconfig.esm.json": true,
+        "tsconfig.json": true,
+        "tsconfig.cjs.json": true,
+        "tsconfig.types.json": true,
+        "package-lock.json": true,
+        "CNAME": true,
+        "CHANGELOG.md": true,
+        ".npmignore": true,
+        ".gitignore": true,
+        "docs": true,
+        "dist": true,
+        "nodemon.json": true
     },
     "hide-files.files": [
         ".vscode",
         ".github",
         "static",
-        "node_modules"
+        "node_modules",
+        "tsconfig.esm.json",
+        "tsconfig.json",
+        "tsconfig.cjs.json",
+        "tsconfig.types.json",
+        "package-lock.json",
+        "CNAME",
+        "CHANGELOG.md",
+        ".npmignore",
+        ".gitignore",
+        "docs",
+        "dist",
+        "nodemon.json"
     ]
 }

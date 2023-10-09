@@ -1,12 +1,11 @@
 //@ts-nocheck
 
-import { readFileSync } from "fs"
+import { readFileSync } from "fs";
 
 export class Toml {
   static parse = parse;
   static read = read;
 }
-
 
 const indexOf =
   [].indexOf ||

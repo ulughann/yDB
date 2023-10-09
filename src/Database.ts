@@ -214,9 +214,7 @@ class Database extends EventEmitter {
       "debug",
       `[${new Date().toISOString().substring(11, 19)}][ydb][File ${
         this.path
-      }] An item has been deleted with name ${JSON.stringify(
-        key
-      )}`
+      }] An item has been deleted with name ${JSON.stringify(key)}`
     );
     return true;
   }
